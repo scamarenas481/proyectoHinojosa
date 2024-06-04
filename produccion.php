@@ -76,7 +76,7 @@
         <input type="text" id="tasa_produccion" name="tasa_produccion" required><br><br>
 
         <label for="dias_laborales">Dias laborales:</label>
-        <input type="text" id="dias_laborales" name="dias_laborales" value=required><br><br>
+        <input type="text" id="dias_laborales" name="dias_laborales" value="360"required><br><br>
 
 
         <input type="submit" value="Calcular">
