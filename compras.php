@@ -38,7 +38,7 @@
             margin-bottom: 20px;
             box-sizing: border-box;
         }
-
+ 
         input[type="submit"] {
             background-color: #006532;
             color: #ffc107;
@@ -61,26 +61,35 @@
 
 <body>
     <h2>Ingresa los datos requeridos:</h2>
-    <form action="procesar_datos_produccion.php" method="POST">
-        <h2>Produccion</h2>
+    <form action="procesar_datos_compra.php" method="POST">
+        <h2>Compras</h2>
         <label for="demanda_anual">Demanda Anual:</label>
-        <input type="text" id="demanda_anual" name="demanda_anual" required><br><br>
+        <input type="text" id="demanda_anual" name="demanda_anual" required>
 
-        <label for="costo_preparar_pedido">Costo de colocar Pedido:</label>
-        <input type="text" id="costo_preparar_pedido" name="costo_preparar_pedido" required><br><br>
+        <label for="costo_preparar_pedido">Costo de preparar Pedido:</label>
+        <input type="text" id="costo_preparar_pedido" name="costo_preparar_pedido" required>
 
-        <label for="costo_inventario">Costo de Mantener una Pieza en el Inventario(anual):</label>
-        <input type="text" id="costo_inventario" name="costo_inventario" required><br><br>
+        <label for="costo_inventario">Costo de Mantener una Pieza en el Inventario (porcentaje):</label>
+        <input type="text" id="costo_inventario" name="costo_inventario" required>
 
-        <label for="tasa_produccion">Tasa de Producción Diaria:</label>
-        <input type="text" id="tasa_produccion" name="tasa_produccion" required><br><br>
+        <label for="unidad_costo_inventario">Unidad de Costo Inventario:</label>
+        <select id="unidad_costo_inventario" name="unidad_costo_inventario" required>
+            <option value="dia">Día</option>
+            <option value="mes">Mes</option>
+            <option value="anio">Año</option>
+        </select>
 
-        <label for="dias_laborales">Dias laborales:</label>
-        <input type="text" id="dias_laborales" name="dias_laborales" value=required><br><br>
+        <label for="costo_pieza">Costo por unidad:</label>
+        <input type="text" id="costo_pieza" name="costo_pieza" required>
 
+        <label for="dias_laborales">Días laborales:</label>
+        <input type="text" id="dias_laborales" name="dias_laborales" value="360" required>
+
+        <label for="tiempo_entrega">Tiempo de Entrega:</label>
+        <input type="text" id="tiempo_entrega" name="tiempo_entrega" required>
 
         <input type="submit" value="Calcular">
-        <a href="menu.php" class="uaemex-button"> Volver al Menú</a>
+        <a href="menu.php" class="uaemex-button">Volver a menu</a>
     </form>
 </body>
 
